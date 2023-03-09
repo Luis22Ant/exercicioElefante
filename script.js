@@ -6,14 +6,17 @@ function letra1(qtde){
         if(i == 1){
             console.log(`${i} elefante incomoda muita gente`);
             
+        } else if (i==2){
+            console.log(`${i} elefantes incomodam, incomodam muito mais`); 
         }
         else if (i%2==0){
-            console.log(`${i} elefantes incomodam ` + letra + ` muito mais`); 
-          
-            while(j<=i){
-                letra= letra + ` ` + palavra;
+            while(j<i){
+                letra = letra + ` ` + palavra;
                 j++;
             }
+            console.log(`${i} elefantes` + letra + ` muito mais`); 
+          
+            
             
         }else {
             console.log(`${i} elefantes incomodam muita gente`); 
