@@ -1,23 +1,18 @@
 function letra1(qtde){
     var letra="";
-    var j=0;
-    var palavra = "incomodam";
+    var j=1;
+    var palavra = ",incomodam";
     for(var i=1;i<=qtde;i++){
         if(i == 1){
             console.log(`${i} elefante incomoda muita gente`);
-            
-        } else if (i==2){
-            console.log(`${i} elefantes incomodam, incomodam muito mais`); 
+
         }
-        else if (i%2==0){
+        else if (ePar(i)){
             while(j<i){
-                letra = letra + ` ` + palavra;
+                letra += palavra;
                 j++;
             }
-            console.log(`${i} elefantes` + letra + ` muito mais`); 
-          
-            
-            
+            console.log(`${i} elefantes incomodam` + letra + ` muito mais`); 
         }else {
             console.log(`${i} elefantes incomodam muita gente`); 
         }
@@ -25,3 +20,9 @@ function letra1(qtde){
     }
 }
 console.log(letra1(10));
+
+function ePar(numero){
+    if(numero%2 == 0){
+        return true;
+    }else return false;
+}
